@@ -1,0 +1,23 @@
+<h2>Account Details</h2>
+Select User <select (change)="sendMessage($event.target.value)">
+  <option *ngFor="let accountDetail of accountDetails"
+   value="{{ accountDetail.name }}">{{ accountDetail.id }}</option>
+</select>
+<table width="100%" border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th align="left" *ngFor="let dataField of dataFields">
+        {{dataField}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let account of accounts">
+      <td>{{account.id}}</td>
+      <td>{{account.name}}</td>
+      <td>{{account.dept}}</td>
+      <td>{{account.doj}}</td>
+      <td>{{account.salary}}</td>
+    </tr>
+  </tbody>
+</table>

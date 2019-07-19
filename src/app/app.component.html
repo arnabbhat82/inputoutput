@@ -1,0 +1,7 @@
+<h1>Welcome, {{ getUser }}</h1>
+<label>Select Account: </label>
+<select>
+  <option value="">Select</option>
+</select>
+<hr />
+<app-child (setAccounts)="recieveMessage($event)"></app-child>
